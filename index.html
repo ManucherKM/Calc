@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calc</title>
+</head>
+
+<body class="body">
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+          <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+          <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+          <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+        </div>
+      </div>
+
+    <div class="containerone">
+        <h1 class="lead-text">
+            Привет пользователь!
+        </h1>
+        <p class="containerone__text">
+            Ты попал на веб-сайт моей куросовой работы. Тут ты сможешь посчитать сумму своей, возможно будущей, ипотеки и прочую информацию о ней.<br> Чтобы начать пользоваться калькулятором нажми на кнопку ниже.
+        </p>
+        <button class="containerone__btn-calc">Калькулятор</button>
+    </div>
+
+    <div class="block opac">
+        <h1 class="header-text">
+            Ипотечный калькулятор
+        </h1>
+        <div class="container">
+            <div class="block-calc">
+                <div class="block-calc__block-cr">
+                    <p class="text-cr">
+                        Сумма кредита
+                    </p>
+                    <input type="number" min="100000" max="15000000" step="10000" class="input-dop input-dop_one"
+                        value="100000">
+                    <input type="range" min="100000" max="15000000" step="10000" value="100000" class="range-cr one">
+                </div>
+
+                <div class="block-calc__block-cr">
+                    <p class="text-cr">
+                        Первоначальный взнос
+                    </p>
+                    <input type="number" min="50000" max="14000000" step="10000" class="input-dop input-dop_two"
+                        value="50000">
+                    <input type="range" min="50000" max="14000000" step="10000" value="100000" class="range-cr two">
+                </div>
+
+                <div class="block-calc__block-cr">
+                    <p class="text-cr">
+                        Срок (лет)
+                    </p>
+                    <input type="number" min="1" max="30" step="1" class="input-dop input-dop_three" value="1">
+                    <input type="range" min="1" max="30" step="1" value="0" class="range-cr three">
+                </div>
+
+                <div class="block-calc__block-cr">
+                    <p class="text-cr">
+                        Ставка в %
+                    </p>
+                    <input type="number" min="1" max="15" step="1" class="input-dop input-dop_four" value="1">
+                    <input type="range" min="1" max="15" step="1" value="0" class="range-cr four">
+                </div>
+            </div>
+
+            <div class="block-screen">
+                <div class="block-screen_sum">
+                    <div class="information">
+                        <p class="grey-text">
+                            Ежемесячный платеж
+                        </p>
+                        <span class="text month-money">4208 Р</span>
+                    </div>
+
+                    <div class="information">
+                        <p class="grey-text">
+                            Сумма кредита
+                        </p>
+                        <span class="text sum-money">50500 Р</span>
+                    </div>
+
+                    <div class="information">
+                        <p class="grey-text">
+                            Рекомендованный доход
+                        </p>
+                        <span class="text recomend-money">0 Р</span>
+                    </div>
+                </div>
+                <div class="information percent">
+                    <p class="grey-text">
+                        Ставка
+                    </p>
+                    <span class="text percent-number">0 %</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
