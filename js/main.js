@@ -15,43 +15,43 @@ const inputThree = document.querySelector(".three");
 const inputFour = document.querySelector(".four");
 
 //Вешаем обработчики на все ползунки
-inputOne.oninput = function () {
+inputOne.oninput = function() {
     inputDopOne.value = inputOne.value;
     sumCr()
 };
 
-inputTwo.oninput = function () {
+inputTwo.oninput = function() {
     inputDopTwo.value = inputTwo.value;
     sumCr();
 };
 
-inputThree.oninput = function () {
+inputThree.oninput = function() {
     inputDopThree.value = inputThree.value;
     sumCr();
 };
 
-inputFour.oninput = function () {
+inputFour.oninput = function() {
     inputDopFour.value = inputFour.value;
     sumCr();
 };
 
 //Вешаем обработчики на все дополнительные инпуты
-inputDopOne.oninput = function () {
+inputDopOne.oninput = function() {
     inputOne.value = inputDopOne.value;
     sumCr();
 };
 
-inputDopTwo.oninput = function () {
+inputDopTwo.oninput = function() {
     inputTwo.value = inputDopTwo.value;
     sumCr();
 };
 
-inputDopThree.oninput = function () {
+inputDopThree.oninput = function() {
     inputThree.value = inputDopThree.value;
     sumCr();
 };
 
-inputDopFour.oninput = function () {
+inputDopFour.oninput = function() {
     inputFour.value = inputDopFour.value;
     sumCr();
 };
@@ -91,7 +91,7 @@ function sumCr() {
         inputThree.value = 1;
         inputFour.value = 1;
     };
-    
+
     percentNumber.textContent = inputDopFour.value + " %";
 
     moneyMon(sum);
@@ -112,8 +112,8 @@ function recom(params) {
 }
 
 //При клике на 1 кнопку
-document.querySelector(".containerone__btn-calc").onclick = function () {
-    
+document.querySelector(".containerone__btn-calc").onclick = function() {
+
 
     document.querySelector(".lead-text").style.animationDuration = "0.5s";
     document.querySelector(".lead-text").style.animationName = "slideinOneEnd";
@@ -127,7 +127,7 @@ document.querySelector(".containerone__btn-calc").onclick = function () {
     setTimeout(() => {
         document.querySelector(".containerone").classList.add("opac");
         document.querySelector(".block").classList.remove("opac");
-        
+
         document.querySelector(".header-text").style.animationDuration = "1s";
         document.querySelector(".header-text").style.animationName = "slideinOne-two";
 
@@ -138,4 +138,4 @@ document.querySelector(".containerone__btn-calc").onclick = function () {
         }, 200);
     }, 500);
 
-}
+};

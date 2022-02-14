@@ -2,12 +2,13 @@ body {
     margin: 0;
     padding: 0;
     background: #fff;
-    overflow: hidden;
+    overflow-x: hidden;
     color: #000;
     font-family: 'Montserrat', sans-serif;
 }
 
-p {
+p,
+h2 {
     margin: 0;
 }
 
@@ -126,11 +127,11 @@ input {
     font-size: 20px;
 }
 
-.input-dop::-webkit-outer-spin-button, .input-dop::-webkit-inner-spin-button {
+.input-dop::-webkit-outer-spin-button,
+.input-dop::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
 
 .range-cr {
     width: 100%;
@@ -174,13 +175,66 @@ input {
     display: none;
 }
 
+.block-parent {
+    margin-top: 40px;
+}
+
+.block-parent_textbtn {
+    width: 50%;
+}
+
+.block-parent__opis {
+    width: 60%;
+    text-align: justify;
+}
+
+.textOpisanie {
+    line-height: 1.5em;
+}
+
+.im {
+    padding: 25px 30px;
+    max-width: 1110px;
+}
+
+.block-parent__btn {
+    width: 87%;
+    padding: 15px 0;
+    margin-top: 64px;
+    font-family: 'Montserrat';
+    border: none;
+    background: #ff9c1c;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Анимации */
+
 @keyframes slideinOne {
     from {
         left: 60%;
         opacity: 0;
     }
-  
     to {
         left: 50%;
         opacity: 1;
@@ -192,7 +246,6 @@ input {
         left: 60%;
         opacity: 0;
     }
-
     to {
         left: 50%;
         opacity: 1;
@@ -204,7 +257,6 @@ input {
         left: 60%;
         opacity: 0;
     }
-
     to {
         left: 50%;
         opacity: 1;
@@ -216,7 +268,6 @@ input {
         left: 50%;
         opacity: 1;
     }
-
     to {
         left: 0%;
         opacity: 0;
@@ -228,7 +279,6 @@ input {
         left: 50%;
         opacity: 1;
     }
-
     to {
         left: 0%;
         opacity: 0;
@@ -240,7 +290,6 @@ input {
         left: 50%;
         opacity: 1;
     }
-
     to {
         left: 0%;
         opacity: 0;
@@ -252,12 +301,12 @@ input {
         transform: translate(100%, 0);
         opacity: 0;
     }
-  
     to {
         transform: translate(0, 0);
         opacity: 1;
     }
 }
+
 
 /* Задний фон */
 
@@ -272,6 +321,7 @@ input {
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }
+
 .waveWrapper {
     overflow: hidden;
     position: absolute;
@@ -281,6 +331,7 @@ input {
     top: 0;
     margin: auto;
 }
+
 .waveWrapperInner {
     position: absolute;
     width: 100%;
@@ -289,17 +340,21 @@ input {
     bottom: -1px;
     background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
 }
+
 .bgTop {
     z-index: 15;
     opacity: 0.5;
 }
+
 .bgMiddle {
     z-index: 10;
     opacity: 0.75;
 }
+
 .bgBottom {
     z-index: 5;
 }
+
 .wave {
     position: absolute;
     left: 0;
@@ -309,30 +364,37 @@ input {
     background-position: 0 bottom;
     transform-origin: center bottom;
 }
+
 .waveTop {
     background-size: 50% 100px;
 }
+
 .waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
+
 .waveMiddle {
     background-size: 50% 120px;
 }
+
 .waveAnimation .waveMiddle {
     animation: move_wave 10s linear infinite;
 }
+
 .waveBottom {
     background-size: 50% 100px;
 }
+
 .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
 }
 
-.waveWrapper, .waveAnimation {
-    position: absolute;
+.waveWrapper,
+.waveAnimation {
+    position: fixed;
     left: 0;
     top: 0;
     height: 100%;
@@ -340,9 +402,8 @@ input {
     z-index: -1;
 }
 
+
 /* Конец */
-
-
 
 @media (max-width: 1200px) {
     body {
@@ -382,7 +443,6 @@ input {
 }
 
 @media (max-width: 768px) {
-
     body {
         overflow-y: scroll;
     }
@@ -398,25 +458,20 @@ input {
         transform: translate(-50%, -130%);
         line-height: 1.5em;
     }
-
     .block-screen {
         margin-left: auto;
         margin-right: auto;
     }
-
     .percent {
         width: 50%;
     }
-
     .block-screen_sum {
         width: 50%;
     }
-
     .block-screen {
         justify-content: space-evenly;
         width: 80%;
     }
-
     .block-calc {
         width: 80%;
         padding-top: 25px;
@@ -424,7 +479,6 @@ input {
         margin-left: auto;
         margin-right: auto;
     }
-
     .header-text {
         font-size: 35px;
     }
@@ -434,7 +488,6 @@ input {
     body {
         overflow-y: scroll;
     }
-
     .input-dop {
         width: 95%;
         font-size: 20px;
@@ -448,25 +501,20 @@ input {
         transform: translate(-50%, -130%);
         line-height: 1.5em;
     }
-
     .block-screen {
         margin-left: auto;
         margin-right: auto;
     }
-
     .percent {
         width: 50%;
     }
-
     .block-screen_sum {
         width: 50%;
     }
-
     .block-screen {
         justify-content: space-evenly;
         width: 80%;
     }
-
     .block-calc {
         width: 80%;
         padding-top: 25px;
@@ -474,8 +522,39 @@ input {
         margin-left: auto;
         margin-right: auto;
     }
-
     .header-text {
         font-size: 35px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        overflow-y: scroll;
+    }
+    .input-dop {
+        width: 92%;
+        font-size: 20px;
+    }
+    .container {
+        max-width: 300px;
+        display: block;
+    }
+    .header-text {
+        font-size: 30px;
+    }
+    .block-screen {
+        display: block;
+    }
+    .block-screen_sum {
+        width: 100%;
+    }
+    .grey-text {
+        text-align: left;
+    }
+    .block-calc {
+        padding-left: 0;
+    }
+    .block-screen {
+        padding-bottom: 25px;
     }
 }
