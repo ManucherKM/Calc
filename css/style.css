@@ -44,8 +44,7 @@ input {
 
 .containerone__text {
     position: absolute;
-    width: fit-content;
-    height: fit-content;
+    width: 1170px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -150%);
@@ -342,3 +341,141 @@ input {
 }
 
 /* Конец */
+
+
+
+@media (max-width: 1200px) {
+    body {
+        overflow-y: scroll;
+    }
+    .container {
+        max-width: 1000px;
+    }
+    .containerone__text {
+        width: 950px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        overflow-y: scroll;
+    }
+    .container {
+        max-width: 900px;
+    }
+    .containerone__text {
+        width: 900px;
+    }
+    .percent {
+        width: 31%;
+    }
+    .block-screen_sum {
+        width: 40%;
+    }
+    .block-screen {
+        justify-content: space-evenly;
+        width: 460px;
+    }
+    .block-calc {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-y: scroll;
+    }
+    .input-dop {
+        width: 97%;
+    }
+    .container {
+        max-width: 700px;
+        display: block;
+    }
+    .containerone__text {
+        width: 700px;
+        transform: translate(-50%, -130%);
+        line-height: 1.5em;
+    }
+
+    .block-screen {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .percent {
+        width: 50%;
+    }
+
+    .block-screen_sum {
+        width: 50%;
+    }
+
+    .block-screen {
+        justify-content: space-evenly;
+        width: 80%;
+    }
+
+    .block-calc {
+        width: 80%;
+        padding-top: 25px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-text {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        overflow-y: scroll;
+    }
+
+    .input-dop {
+        width: 95%;
+        font-size: 20px;
+    }
+    .container {
+        max-width: 500px;
+        display: block;
+    }
+    .containerone__text {
+        width: 500px;
+        transform: translate(-50%, -130%);
+        line-height: 1.5em;
+    }
+
+    .block-screen {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .percent {
+        width: 50%;
+    }
+
+    .block-screen_sum {
+        width: 50%;
+    }
+
+    .block-screen {
+        justify-content: space-evenly;
+        width: 80%;
+    }
+
+    .block-calc {
+        width: 80%;
+        padding-top: 25px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-text {
+        font-size: 35px;
+    }
+}
