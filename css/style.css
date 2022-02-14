@@ -208,7 +208,10 @@ input {
     border-radius: 10px;
 }
 
-
+.block-parentOne {
+    animation-name: slideinOne-two;
+    animation-duration: 1s;
+}
 
 
 
@@ -558,3 +561,4 @@ input {
         padding-bottom: 25px;
     }
 }
+

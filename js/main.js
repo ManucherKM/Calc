@@ -1,6 +1,13 @@
 //Звуки
 let audioSlick = new Audio("audio/one.mp3");
 
+//Дотягиваемся до блоков (виды ипотеки)
+
+let blockOne = document.querySelector(".block-parentOne");
+let blockTwo = document.querySelector(".block-parentTwo");
+let blockThree = document.querySelector(".block-parentThree");
+let blockFour = document.querySelector(".block-parentFour");
+let blockFive = document.querySelector(".block-parentFive");
 
 // Все дополнительные инпуты(индикаторы значения)
 const inputDopOne = document.querySelector(".input-dop_one");
@@ -15,43 +22,43 @@ const inputThree = document.querySelector(".three");
 const inputFour = document.querySelector(".four");
 
 //Вешаем обработчики на все ползунки
-inputOne.oninput = function() {
+inputOne.oninput = function () {
     inputDopOne.value = inputOne.value;
     sumCr()
 };
 
-inputTwo.oninput = function() {
+inputTwo.oninput = function () {
     inputDopTwo.value = inputTwo.value;
     sumCr();
 };
 
-inputThree.oninput = function() {
+inputThree.oninput = function () {
     inputDopThree.value = inputThree.value;
     sumCr();
 };
 
-inputFour.oninput = function() {
+inputFour.oninput = function () {
     inputDopFour.value = inputFour.value;
     sumCr();
 };
 
 //Вешаем обработчики на все дополнительные инпуты
-inputDopOne.oninput = function() {
+inputDopOne.oninput = function () {
     inputOne.value = inputDopOne.value;
     sumCr();
 };
 
-inputDopTwo.oninput = function() {
+inputDopTwo.oninput = function () {
     inputTwo.value = inputDopTwo.value;
     sumCr();
 };
 
-inputDopThree.oninput = function() {
+inputDopThree.oninput = function () {
     inputThree.value = inputDopThree.value;
     sumCr();
 };
 
-inputDopFour.oninput = function() {
+inputDopFour.oninput = function () {
     inputFour.value = inputDopFour.value;
     sumCr();
 };
@@ -112,7 +119,7 @@ function recom(params) {
 }
 
 //При клике на 1 кнопку
-document.querySelector(".containerone__btn-calc").onclick = function() {
+document.querySelector(".containerone__btn-calc").onclick = function () {
 
 
     document.querySelector(".lead-text").style.animationDuration = "0.5s";
@@ -123,19 +130,36 @@ document.querySelector(".containerone__btn-calc").onclick = function() {
 
     document.querySelector(".containerone__btn-calc").style.animationDuration = "0.5s";
     document.querySelector(".containerone__btn-calc").style.animationName = "slideinThreeEnd";
+    
+
+
     audioSlick.play();
     setTimeout(() => {
+
         document.querySelector(".containerone").classList.add("opac");
         document.querySelector(".block").classList.remove("opac");
+        blockOne.classList.remove("opac");
+
 
         document.querySelector(".header-text").style.animationDuration = "1s";
         document.querySelector(".header-text").style.animationName = "slideinOne-two";
 
-        document.querySelector(".container").style.animationDuration = "1s";
+        document.querySelector(".container").style.animationDuration = "1.2s";
         document.querySelector(".container").style.animationName = "slideinOne-two";
+
+
+        document.querySelector(".block").classList.remove("opac");
+        blockOne.style.animationDuration = "1.5s";
+        blockOne.style.animationName = "slideinOne-two";
+
         setTimeout(() => {
             audioSlick.play();
         }, 200);
     }, 500);
 
 };
+
+
+document.querySelector(".block").onscroll = function () {
+
+}
