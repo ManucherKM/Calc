@@ -121,7 +121,6 @@ function recom(params) {
 //При клике на 1 кнопку
 document.querySelector(".containerone__btn-calc").onclick = function () {
 
-
     document.querySelector(".lead-text").style.animationDuration = "0.5s";
     document.querySelector(".lead-text").style.animationName = "slideinOneEnd";
 
@@ -130,8 +129,6 @@ document.querySelector(".containerone__btn-calc").onclick = function () {
 
     document.querySelector(".containerone__btn-calc").style.animationDuration = "0.5s";
     document.querySelector(".containerone__btn-calc").style.animationName = "slideinThreeEnd";
-    
-
 
     audioSlick.play();
     setTimeout(() => {
@@ -141,25 +138,93 @@ document.querySelector(".containerone__btn-calc").onclick = function () {
         blockOne.classList.remove("opac");
 
 
-        document.querySelector(".header-text").style.animationDuration = "1s";
+        document.querySelector(".header-text").style.animationDuration = "0.9s";
         document.querySelector(".header-text").style.animationName = "slideinOne-two";
 
-        document.querySelector(".container").style.animationDuration = "1.2s";
+        document.querySelector(".container").style.animationDuration = "1.1s";
         document.querySelector(".container").style.animationName = "slideinOne-two";
 
 
         document.querySelector(".block").classList.remove("opac");
-        blockOne.style.animationDuration = "1.5s";
+        blockOne.style.animationDuration = "1.3s";
         blockOne.style.animationName = "slideinOne-two";
 
+        document.body.onscroll = function () {
+            let scrollTop = window.scrollY;
+            if (scrollTop >= 100) {
+                blockTwo.classList.remove("opacv")
+                blockTwo.style.animationDuration = "1s";
+                blockTwo.style.animationName = "slideinOne-two";
+            }
+
+            if (scrollTop >= 300) {
+                blockThree.classList.remove("opacv")
+                blockThree.style.animationDuration = "1s";
+                blockThree.style.animationName = "slideinOne-two";
+            }
+
+            if (scrollTop >= 600) {
+                blockFour.classList.remove("opacv")
+                blockFour.style.animationDuration = "1s";
+                blockFour.style.animationName = "slideinOne-two";
+            }
+
+            if (scrollTop >= 900) {
+                blockFive.classList.remove("opacv")
+                blockFive.style.animationDuration = "1s";
+                blockFive.style.animationName = "slideinOne-two";
+            }
+
+        };
         setTimeout(() => {
             audioSlick.play();
         }, 200);
     }, 500);
 
+
+    //Получаем кнопки от доп. блоков
+    let buttonOne = document.querySelector(".block-parent__btn-One");
+    let buttonTwo = document.querySelector(".block-parent__btn-Two");
+    let buttonThree = document.querySelector(".block-parent__btn-Three");
+    let buttonFour = document.querySelector(".block-parent__btn-Four");
+    let buttonFive = document.querySelector(".block-parent__btn-Five");
+
+    //Ставим на них обработчики событий
+    const anchors = document.querySelectorAll('a[href^="#top"]')
+
+    for (let anchor of anchors) {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+            document.querySelector(goto).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            })
+        })
+    }
+
+    buttonOne.addEventListener("click", function () {
+        inputDopFour.value = 4.89;
+    })
+
+    buttonTwo.addEventListener("click", function () {
+        inputDopFour.value = 4.39;
+    })
+
+    buttonThree.addEventListener("click", function () {
+        inputDopFour.value = 6;
+    })
+
+    buttonFour.addEventListener("click", function () {
+        inputDopFour.value = 6.5;
+    })
+
+    buttonFive.addEventListener("click", function () {
+        inputDopFour.value = 5;
+    })
 };
 
 
-document.querySelector(".block").onscroll = function () {
 
-}
+
+

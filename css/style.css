@@ -208,6 +208,11 @@ input {
     border-radius: 10px;
 }
 
+.block-parent__btn:hover {
+    transition: all 300ms;
+    background: #d37800;
+}
+
 .block-parentOne {
     animation-name: slideinOne-two;
     animation-duration: 1s;
@@ -405,7 +410,9 @@ input {
     z-index: -1;
 }
 
-
+.opacv {
+    opacity: 0;
+}
 /* Конец */
 
 @media (max-width: 1200px) {
