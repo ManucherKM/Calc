@@ -164,6 +164,7 @@ input {
     color: rgb(255, 166, 0);
     font-size: 80px;
     font-weight: normal;
+    white-space: nowrap;
 }
 
 .block {
@@ -218,6 +219,10 @@ input {
     animation-duration: 1s;
 }
 
+.inpAnime {
+    animation-name: inputBack;
+    animation-duration: 800ms;
+}
 
 
 
@@ -312,6 +317,21 @@ input {
     to {
         transform: translate(0, 0);
         opacity: 1;
+    }
+}
+
+@keyframes inputBack {
+    0% {
+        background: #fff;
+        color: #000;
+    }
+    50% {
+        background: #ab489d;
+        color: #fff;
+    }
+    100% {
+        background: #fff;
+        color: #000;
     }
 }
 
@@ -425,6 +445,12 @@ input {
     .containerone__text {
         width: 950px;
     }
+    .im {
+        width: 944px;
+    }
+    .textName {
+        width: 80%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -449,6 +475,9 @@ input {
     }
     .block-calc {
         padding-left: 20px;
+    }
+    .im {
+        width: 840px;
     }
 }
 
@@ -491,6 +520,9 @@ input {
     }
     .header-text {
         font-size: 35px;
+    }
+    .block-parent {
+        display: none;
     }
 }
 

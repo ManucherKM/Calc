@@ -205,22 +205,57 @@ document.querySelector(".containerone__btn-calc").onclick = function () {
 
     buttonOne.addEventListener("click", function () {
         inputDopFour.value = 4.89;
+        setTimeout(() => {
+            inputDopFour.classList.add("inpAnime");
+            sumCr();
+            setTimeout(() => {
+                inputDopFour.classList.remove("inpAnime");
+            }, 600);
+        }, 500);
     })
 
     buttonTwo.addEventListener("click", function () {
         inputDopFour.value = 4.39;
+        setTimeout(() => {
+            inputDopFour.classList.add("inpAnime");
+            sumCr();
+            setTimeout(() => {
+                inputDopFour.classList.remove("inpAnime");
+            }, 800);
+        }, 500);
     })
 
     buttonThree.addEventListener("click", function () {
         inputDopFour.value = 6;
+        setTimeout(() => {
+            inputDopFour.classList.add("inpAnime");
+            sumCr();
+            setTimeout(() => {
+                inputDopFour.classList.remove("inpAnime");
+            }, 800);
+        }, 500);
     })
 
     buttonFour.addEventListener("click", function () {
         inputDopFour.value = 6.5;
+        setTimeout(() => {
+            inputDopFour.classList.add("inpAnime");
+            sumCr();
+            setTimeout(() => {
+                inputDopFour.classList.remove("inpAnime");
+            }, 800);
+        }, 500);
     })
 
     buttonFive.addEventListener("click", function () {
         inputDopFour.value = 5;
+        setTimeout(() => {
+            inputDopFour.classList.add("inpAnime");
+            sumCr();
+            setTimeout(() => {
+                inputDopFour.classList.remove("inpAnime");
+            }, 800);
+        }, 500);
     })
 };
 
