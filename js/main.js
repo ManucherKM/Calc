@@ -81,12 +81,12 @@ function sumCr() {
     let sum = Math.floor(i + (inputDopThree.value * j));
 
     if (sum >= 0) {
-        sumMoney.textContent = sum + " Р";
+        sumMoney.textContent = sum + " ₽";
     };
 
     if (inputDopOne.value < 0 || inputDopTwo.value < 0 || inputDopThree.value < 0 || inputDopFour.value < 0) {
 
-        sumMoney.textContent = 50500 + "Р";
+        sumMoney.textContent = 50500 + "₽";
 
         inputDopOne.value = 100000;
         inputDopTwo.value = 50000;
@@ -108,14 +108,14 @@ function sumCr() {
 function moneyMon(money) {
     let q = inputDopThree.value * 12;
     let b = Math.floor(money / q);
-    monthMoney.textContent = b;
+    monthMoney.textContent = b + " ₽";
     recom(b);
 }
 
 //Рекомендованный доход
 function recom(params) {
     let m = params * 2;
-    recomendMonth.textContent = m;
+    recomendMonth.textContent = m + " ₽";
 }
 
 //При клике на 1 кнопку
